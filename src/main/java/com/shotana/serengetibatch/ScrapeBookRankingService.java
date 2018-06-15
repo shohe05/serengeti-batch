@@ -23,8 +23,8 @@ public class ScrapeBookRankingService {
         // 紀伊国屋のサイトから、文庫のデイリーランキングのページを取得
         Document document = Jsoup.connect(KINOKUNIYA_DAILY_BUNKO_RANKING_URL).get();
 
-        // ランキングのリストを取得
-        Elements rankingElements = document.select(".rankingList");
+        // ランキングのリストを取得 10位まで取る
+        List<Element> rankingElements = document.select(".rankingList").subList(0, 10);
 
         // ランキングの本を一つずつ処理する
         for (Element element : rankingElements) {
