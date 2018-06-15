@@ -15,13 +15,13 @@ public class Book {
 
     @Override
     public String toString() {
-        return rank + "位" + "\n"
-                + title + "\n"
-                + "著者：" + author + "\n"
-                + "説明：" + description + "\n"
-                + "価格：￥" + price + "\n"
-                + "著者について：" + authorDescription + "\n"
-                + "詳細ページ：" + detailPageLink
+        return "\n\n" + rank + "位："
+                + title + "\n\n"
+                + "著者：\n" + author + "\n\n"
+                + "説明：\n" + description + "\n\n"
+                + "価格：￥" + price + "\n\n"
+                + "著者について：\n" + authorDescription + "\n\n"
+                + "詳細ページ：\n" + detailPageLink
                 ;
     }
 }
